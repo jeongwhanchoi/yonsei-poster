@@ -1,0 +1,178 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A beamer poster style for the Yonsei University. Jeongwhan Choi <jeongwhan.choi@yonsei.ac.kr>, Feb 2022.
+% Based on A.Baydin's beamer poster style for the University of Oxford.
+% His beamer poster style is also based on the I6pd2 style created by Thomas Deselaers an Philippe Dreuw.
+%
+% Dreuw & Deselaer's Poster
+% LaTeX Template
+% Version 1.0 (11/04/13)
+%
+% Created by:
+% Philippe Dreuw and Thomas Deselaers
+% http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
+
+\usepackage[orientation=landscape,size=a0,scale=1.3]{beamerposter} % Use the beamerposter package for laying out the poster with a portrait orientation and an a0 paper size
+
+\usetheme{Yonsei}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage{blindtext}
+\usepackage{amsmath,amsthm,amssymb,latexsym} % For including math equations, theorems, symbols, etc
+\usepackage[document]{ragged2e}
+\usepackage{times}\usefonttheme{professionalfonts}  % Uncomment to use Times as the main font
+\usefonttheme[onlymath]{serif} % Uncomment to use a Serif font within math environments
+%\boldmath % Use bold for everything within the math environment
+\usepackage{booktabs} % Top and bottom rules for tables
+\usepackage{microtype}
+
+\usecaptiontemplate{\small\structure{\insertcaptionname~\insertcaptionnumber: }\insertcaption} % A fix for figure numbering
+
+\newcommand{\shrink}{-15pt}
+
+\def\imagetop#1{\vtop{\null\hbox{#1}}}
+
+\let\oldbibliography\thebibliography
+\renewcommand{\thebibliography}[1]{\oldbibliography{#1}
+\setlength{\itemsep}{-10pt}}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% PACKAGES %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage{kotex} % use KoTeX package for Korean 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xcolor} % color
+\usepackage{cancel}
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{bm}
+\usepackage{amsthm}
+\usepackage{paralist}
+\usepackage{stfloats}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%   TITLE SECTION 
+%----------------------------------------------------------------------------------------
+\title{\Huge Yonsei University Beamer Poster} % Poster title
+\author{Jeongwhan Choi, Author 1, Author 2, Author 3}
+\institute{Department of Artificial Intelligence, Yonsei University\\\vspace{4mm}
+\texttt{\{jeongwhan.choi, author1, author2, author3\}@yonsei.ac.kr}}
+
+%----------------------------------------------------------------------------------------
+%   FOOTER TEXT
+%----------------------------------------------------------------------------------------
+\newcommand{\leftfoot}{} % Left footer text
+\newcommand{\rightfoot}{} % Right footer text
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\addtobeamertemplate{block end}{}{\vspace*{2ex}} % White space under blocks
+
+\begin{frame}[t] % The whole poster is enclosed in one beamer frame
+
+\begin{columns}[t] % The whole poster consists of three major columns, each of which can be subdivided further with another \begin{columns} block - the [t] argument aligns each column's content to the top
+
+  \begin{column}{.02\textwidth}\end{column} % Empty spacer column
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Column 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{column}{.3\textwidth} % 1st column
+
+    \vspace{\shrink}          
+    \begin{block}{Overview}
+      \begin{itemize}
+          \item Overview 1
+          \item Overview 2
+          \item Overview 3
+          \item Overview 4
+      \end{itemize}
+    \end{block}
+
+    \begin{block}{Another block}
+      Block text \cite{choi2022STGNCDE}...
+    \end{block}
+    
+  \end{column} % End of the 1st column
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Column 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{column}{.02\textwidth}\end{column} % Empty spacer column
+
+  \begin{column}{.3\textwidth} % 2nd column
+    \vspace{\shrink}
+    
+    \begin{block}{Method}
+        \begin{figure}[t]
+            \centering
+            \includegraphics[width=0.6\columnwidth]{img/stgncde_tranparent.png}
+            \caption{The overall workflow in our proposed STG-NCDE~\cite{choi2022STGNCDE}.}
+            \label{fig:stgncde}
+        \end{figure}
+        \begin{itemize}
+            \item Our proposed...
+        \end{itemize}
+        \textbf{Spatial processing.}
+        \begin{itemize}
+        \item The second NCDE starts for its spatial processing as follows:
+            \begin{align}\begin{split}
+                \bm{Z}(T) = \bm{Z}(0) + \int_{0}^{T} g(\bm{Z}(t);\bm{\theta}_g) \frac{d\bm{H}(t)}{dt} dt,\label{eq:type2}
+            \end{split}\end{align}
+            where ...
+        \end{itemize}
+    \end{block}
+    
+
+  \end{column} % End of the 2nd column
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Column 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{column}{.02\textwidth}\end{column} % Empty spacer column
+
+  \begin{column}{.3\textwidth} % 3rd column
+    \begin{block}{Results}
+        Results...
+
+
+    \end{block}
+
+    \begin{block}{References}
+    %   \nocite{*} % Insert publications even if they are not cited in the poster
+      \linespread{0.928}\selectfont
+      \footnotesize{\bibliographystyle{unsrt}
+      \bibliography{ref}}
+    \end{block}
+
+  \end{column} % End of the 3rd column
+
+  \begin{column}{.02\textwidth}\end{column} % Empty spacer column
+
+\end{columns} % End of all the columns in the poster
+
+\end{frame} % End of the enclosing frame
+
+\end{document}
