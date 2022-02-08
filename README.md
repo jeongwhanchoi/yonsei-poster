@@ -11,7 +11,7 @@ Based on the Baydin's [Oxford-poster](https://github.com/gbaydin/oxford-poster) 
 
 #### Landscape
 
-![landscape](https://github.com/jeongwhanchoi/yonsei-poster/raw/main/img/yonsei_poster_landscape.png)
+![landscape](https://github.com/jeongwhanchoi/yonsei-poster/raw/main/img/yonsei_poster-landscape.png)
 
 #### Portrait
 ![portrait](https://github.com/jeongwhanchoi/yonsei-poster/raw/main/img/yonsei_poster-portrait.png)
